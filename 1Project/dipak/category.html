@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Similar Products</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #f5f7fa;
+      color: #222;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .product-grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      justify-content: center;
+      padding: 20px;
+      max-width: 1200px;
+      width: 100%;
+      margin: 100px;
+    }
+
+    .product-card {
+      background-color: #fff;
+      border: 1px solid #ddd;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+      padding: 15px;
+      width: 100%;
+      max-width: 220px;
+      text-align: center;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .product-card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    }
+
+    .product-card img {
+      width: 100%;
+      height: auto;
+      border-radius: 8px;
+      margin-bottom: 10px;
+    }
+
+    .product-card p {
+      font-size: clamp(1rem, 4vw, 1.1rem);
+      font-weight: 600;
+      margin-bottom: 8px;
+      color: #333;
+    }
+
+    .product-card a {
+      display: inline-block;
+      font-size: 16px;
+      color: #007BFF;
+      text-decoration: none;
+      margin-top: 5px;
+      transition: color 0.3s ease;
+    }
+
+    .product-card a:hover {
+      color: #333;
+    }
+
+    @media (max-width: 600px) {
+      .nav_bar .nav_list {
+        flex-direction: column;
+        align-items: center;
+        gap: 0.5rem;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <section id="header-1" class="header">
+    <div id="header">
+      <div class="logo">
+        <h3>DIPAK.</h3>
+      </div>
+      <div class="nav_bar">
+        <ul class="nav_list">
+          <li><a href="#header-1">Home</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="#shop">Shop</a></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <div id="simillar_container" class="product-grid">
+    <!-- same category product will be injected here -->
+  </div>
+
+  <footer class="footer">
+    <div class="footer-content">
+      <p>&copy; 2025 DIPAK. All rights reserved.</p>
+      <ul class="footer-links">
+        <li><a href="privacypolice.html">Privacy Policy</a></li>
+        <li><a href="term&conditions.html">Terms of Service</a></li>
+        <li><a href="disclamer.html">Disclaimer</a></li>
+      </ul>
+    </div>
+  </footer>
+
+  <script>
+    fetch('products.json')
+      .then(res => res.json())
+      .then(products => {
+        const urlParams = new URLSearchParams(window.location.search);
+        const productCategory = urlParams.get('category');
+        const similarContainer = document.getElementById('simillar_container');
+
+        Object.entries(products)
+          .filter(([_, item]) => item.category === productCategory)
+          .slice(0, 6)
+          .forEach(([id, item]) => {
+            const div = document.createElement('div');
+            div.className = 'product-card';
+            div.innerHTML = `
+              <img src="${item.image}" alt="${item.name}" />
+              <p>${item.name}</p>
+              <a href="product.html?id=${id}&category=${item.category}">Buy</a>
+            `;
+            similarContainer.appendChild(div);
+          });
+      })
+      .catch(err => {
+        console.error("Failed to fetch products.json", err);
+        document.getElementById('simillar_container').innerHTML =
+          "<p>Unable to load similar products.</p>";
+      });
+  </script>
+
+</body>
+
+</html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body style="background-color: #131313; color: white;">
+    <h1>closure ka fanda</h1>
+    <!-- laxical scope -->
+    <script>
+
+        function outer() {
+            let name = 'manish';
+            function inner() {
+                console.log(name);
+            }
+            inner();
+        }
+        // outer();
+        //inner function have access of  name bacause of laxical scope
+    </script>
+    <!-- closures -->
+    <script>
+        function outer() {
+            let name = 'manish';
+
+            function inner() {
+                console.log(name);
+            } 
+            return inner;
+        }
+        
+        let c=outer();  // outer funtion return ho gya matlab iske ander ke sare variable remove ho gya honge memory se
+        c(); //  pr name abhi bhi print ho rha hai,matlab inner function bind ho gya hai name ke refence ke sath
+           
+        
+        
+    </script>
+
+    <!-- counter -->
+     <script>
+        function outercounter(){
+            let count=0;
+                  function innercounter(){
+                        console.log(++count);
+                  }
+                  return innercounter;
+        }
+        let counter=outercounter();   //  innercounter ka reference aa gya hai counter me
+        counter();
+     </script>
+</body>
+
+</html>

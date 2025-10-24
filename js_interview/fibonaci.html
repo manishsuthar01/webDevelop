@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <p><b>Question:</b> implement a recursive function to find the nth fibonaci number?</p>
+
+    <!-- script -->
+    <script>
+        function fibo(n) {
+            if (n <= 1) return n;
+            let ans = fibo(n - 1) + fibo(n - 2);
+            return ans;
+        }
+
+        console.log(fibo(70));
+     
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h2>how to use spread operator to copy data of arrays</h2>
+    <script>
+        let array = ["manish", "kumar", "khati"];
+        let [item1, item2, item3] = array;
+
+        console.log(item1);
+        console.log(item2);
+        console.log(item3);
+
+        let array2 = ["manish", "kumar", "khati"];
+
+        let [item4, ...item5] = array2;//...item5--> ... is called rest operator
+
+        console.log(item4);
+        console.log(item5);
+
+
+
+    </script>
+</body>
+
+</html>

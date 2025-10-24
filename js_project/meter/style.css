@@ -1,0 +1,130 @@
+/* Reset and Global Styles */
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+/* Full Page Styling */
+html, body {
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to bottom right, #87e8a3, #3cb371);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 20px;
+}
+
+/* Main Container */
+.container {
+  width: 90%;
+  max-width: 500px;
+  background: white;
+  padding: 30px;
+  border-radius: 16px;
+  box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease-in-out;
+}
+
+.container:hover {
+  transform: translateY(-5px);
+}
+
+/* Button Styling */
+.yes, .no {
+  width: 20%;
+  height: 40px;
+  border-radius: 8px;
+  outline: none;
+  border: none;
+  color: white;
+  font-weight: 600;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  touch-action: manipulation; /* Improves touch responsiveness */
+}
+
+.yes {
+  background: linear-gradient(45deg, #ff4b5c, #ff6a6a);
+}
+
+.no {
+  background: linear-gradient(45deg, #4b6cff, #6a8dff);
+}
+
+.yes:hover, .no:hover {
+  opacity: 0.9;
+  transform: scale(1.08);
+}
+
+/* Flex Box Layout */
+.box {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-evenly;
+  padding: 15px;
+}
+
+/* Text Styling */
+.box p {
+  font-size: clamp(1rem, 1.1rem, 2rem);
+  font-weight: 500;
+  color: #333;
+}
+
+#submit{
+  margin: 20px;
+  background-color: #87e8a3;
+  padding: 10px;
+  border-radius: 10px;
+}
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .container {
+      width: 95%;
+      padding: 20px;
+  }
+
+  .yes, .no {
+      width: 50px;
+      height: 50px;
+      font-size: 0.9rem;
+  }
+
+  .box {
+      flex-direction: row;
+      gap: 15px;
+  }
+
+  .box p {
+      font-size: clamp(1rem, 1.3rem, 1.8rem);
+  }
+}
+
+@media (max-width: 480px) {
+  .container {
+      width: 100%;
+      padding: 15px;
+      border-radius: 12px;
+  }
+
+  .yes, .no {
+      width: 75px;
+      height: 40px;
+      font-size: 0.85rem;
+  }
+
+  .box {
+      flex-direction: column;
+      gap: 10px;
+  }
+
+  .box p {
+      font-size: clamp(0.9rem, 1.1rem, 1.5rem);
+  }
+}

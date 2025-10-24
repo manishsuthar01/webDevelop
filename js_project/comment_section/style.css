@@ -1,0 +1,65 @@
+body {
+  font-family: "Segoe UI", sans-serif;
+  background: linear-gradient(135deg, #1f1c2c, #928dab);
+  color: #fff;
+  padding: 20px;
+  overflow-x: hidden;
+}
+
+h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.comment-form,
+.comments{
+  margin: 20px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 15px;
+  padding: 15px;
+  margin-bottom: 15px;
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+textarea {
+  width: 100%;
+  border: none;
+  outline: none;
+  padding: 10px;
+  font-size: 14px;
+  border-radius: 10px;
+  resize: none;
+  background: rgba(255, 255, 255, 0.05);
+  color: #fff;
+}
+
+button {
+  background: rgba(255, 255, 255, 0.2);
+  border: none;
+  padding: 8px 15px;
+  margin-top: 10px;
+  border-radius: 10px;
+  color: #fff;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+button:hover {
+  background: rgba(255, 255, 255, 0.4);
+}
+
+.comment p {
+  margin: 5px 0;
+}
+
+.replies{
+  margin-top:15px;
+  border-top: 1px solid;
+
+  margin-left: 40px;
+  /* display: none; */
+}
+.replyForm{
+  margin: 20px;
+}

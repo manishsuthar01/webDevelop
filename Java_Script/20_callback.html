@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h2>Jab hum ek function ke andar doosre function ko as argument pass karte hain, aur usse baad mein call karte hain,
+        use callback kehte hain."
+
+    </h2>
+    <h3> Callbacks ka sabse bada use asynchronous operations me hota hai, jaise: <br>
+
+        setTimeout, setInterval <br>
+
+        File read/write <br>
+
+        API call <br>
+
+        Event handling
+    </h3>
+    <h3> – Array ke methods jaise forEach, map, filter, find, etc. har element pe kaam karne ke liye ek callback
+        function lete hain.
+    </h3>
+
+
+    <script>
+        function greet(name, callback) {
+            console.log("hii" + " " + name);
+            callback(name);
+        }
+        function bye(name) {
+            console.log("bye" + ' ' + name)
+        }
+        greet('manish', bye)
+        //  Synchronous Callbacks = No Hell
+
+
+        // callback with async
+        // callback hell as well
+
+        function loadingdata(callback) {
+            setTimeout(() => {
+                console.log("1) loading the data...");
+                callback(approvingdata);
+            }, 0);
+            
+
+        } 
+
+        function collectingdata(callback) {
+            console.log('2) collecting the data...')
+            callback(approvingdata)
+        }
+
+        function approvingdata(callback) {
+
+            console.log('3) approving the data...')
+            callback(approveddata)
+
+        }
+
+        function approveddata() {
+            console.log('4) approved the data..')
+        }
+
+ 
+
+        loadingdata(collectingdata);
+        // collectingdata();
+        // approvingdata();
+        // approveddata();
+
+        console.log('5')
+
+    </script>
+
+</body>
+
+</html>

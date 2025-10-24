@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <h2>multidimension array</h2>
+  <script>
+    console.log("ok");
+
+    let arr = [
+      ["manish", 20],
+      ["suthar", 30],
+      ["khati", 40],
+    ];
+
+    console.log(arr);
+    // console.log(arr[2])
+
+    for (let i = 0; i < arr.length; i++) {
+      for (let j = 0; j < arr[i].length; j++) {
+        console.log(arr[i][j]);
+      }
+    }
+
+    arr.forEach((element) => {
+      element.forEach((data) => {
+        console.log(data);
+      });
+    });
+
+    for (let a of arr) {
+      for (let b of a) {
+        console.log(b);
+      }
+    }
+
+  </script>
+</body>
+
+</html>

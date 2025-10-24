@@ -1,0 +1,123 @@
+{
+  "1": {
+    "name": "TOZO T6 True Wireless Earbuds",
+    "description": "High-quality Bluetooth earbuds with IPX8 waterproof rating and touch controls.",
+    "image": "images/airpods.jpeg",
+    "category": "Earpods",
+    "buyLink": "https://www.amazon.com/dp/B07RGZ5NKS"
+  },
+  "2": {
+    "name": "Elephas Mini Projector",
+    "description": "Compact and portable projector suitable for home entertainment and presentations.",
+    "image": "images/projector.jpeg",
+    "category": "Projector",
+    "buyLink": "https://www.amazon.com/dp/B07V1J1ZQW"
+  },
+  "3": {
+    "name": "Apple AirPods Pro (2nd Gen)",
+    "description": "Noise-cancelling wireless earbuds with adaptive transparency and personalized spatial audio.",
+    "image": "images/airpods.jpeg",
+    "category": "Earpods",
+    "buyLink": "https://www.amazon.com/dp/B0BDHWDR12"
+  },
+  "4": {
+    "name": "Apple Watch SE (2nd Gen)",
+    "description": "Smartwatch with fitness tracking, heart rate monitoring, and customizable watch faces.",
+    "image": "images/smartwatch.webp",
+    "category": "Smartwatch",
+    "buyLink": "https://www.amazon.com/dp/B0BDJ6H8T7"
+  },
+  "5": {
+    "name": "Dell Inspiron 15",
+    "description": "15.6-inch laptop with Intel Core i5, 8GB RAM, and 256GB SSD for smooth performance.",
+    "image": "images/dell.jpeg",
+    "category": "Laptop",
+    "buyLink": "https://www.amazon.com/dp/B08X4VDDQJ"
+  },
+  "6": {
+    "name": "HP Pavilion x360",
+    "description": "Convertible touchscreen laptop with 11th Gen Intel Core and Windows 11.",
+    "image": "images/hp.jpeg",
+    "category": "Laptop",
+    "buyLink": "https://www.amazon.com/dp/B0949VR3ZB"
+  },
+  "7": {
+    "name": "Logitech MX Master 3",
+    "description": "Advanced wireless mouse with ergonomic design and customizable buttons.",
+    "image": "images/logitech.jpeg",
+    "category": "Accessories",
+    "buyLink": "https://www.amazon.com/dp/B07S395RWD"
+  },
+  "8": {
+    "name": "Anker PowerCore 10000",
+    "description": "Compact portable charger with fast charging technology and 10000mAh capacity.",
+    "image": "images/anker.jpeg",
+    "category": "Accessories",
+    "buyLink": "https://www.amazon.com/dp/B0194WDVHI"
+  },
+  "9": {
+    "name": "Samsung Galaxy Tab A9+",
+    "description": "Affordable Android tablet with large display and powerful battery.",
+    "image": "images/tabA9.jpeg",
+    "category": "Mobiles",
+    "buyLink": "https://www.amazon.com/dp/B0CKFZKMDC"
+  },
+  "10": {
+    "name": "Lenovo Tab M10",
+    "description": "10.1-inch tablet with Full HD display and dual speakers for entertainment.",
+    "image": "images/lenevo.jpeg",
+    "category": "Mobiles",
+    "buyLink": "https://www.amazon.com/dp/B08529TZMC"
+  },
+  "11": {
+    "name": "Canon EOS 200D DSLR",
+    "description": "Compact DSLR camera with dual pixel autofocus and Wi-Fi support.",
+    "image": "images/canon.jpeg",
+    "category": "Camera",
+    "buyLink": "https://www.amazon.com/dp/B07B3Z5N88"
+  },
+  "12": {
+    "name": "Sony Alpha a6400",
+    "description": "Mirrorless camera with real-time eye autofocus and 4K video recording.",
+    "image": "images/sony.jpeg",
+    "category": "Camera",
+    "buyLink": "https://www.amazon.com/dp/B07MTWVD3Y"
+  },
+  "13": {
+    "name": "Realme Narzo 60 5G",
+    "description": "Affordable 5G smartphone with sleek design and AMOLED display.",
+    "image": "https://image01.realme.net/general/20230701/1688197273128.png",
+    "category": "Mobiles",
+    "buyLink": "https://www.amazon.com/dp/B0C9JX2ZXZ"
+  },
+  "14": {
+    "name": "Redmi Note 13 Pro",
+    "description": "Mid-range phone with powerful camera and fast charging.",
+    "image": "https://i01.appmifile.com/webfile/globalimg/products/pc/redmi-note-13-pro/overview01.png",
+    "category": "Mobiles",
+    "buyLink": "https://www.amazon.com/dp/B0CPQ9NL7Z"
+  },
+  "15": {
+    "name": "HP Envy x360",
+    "description": "2-in-1 convertible laptop with high performance and touch display.",
+    "image": "https://ssl-product-images.www8-hp.com/digmedialib/prodimg/lowres/c08371094.png",
+    "category": "Laptops",
+    "buyLink": "https://www.amazon.com/dp/B0BSBMZC9S"
+  },
+  "16": {
+    "name": "Acer Aspire 5",
+    "description": "Reliable everyday laptop with AMD Ryzen and sleek design.",
+    "image": "https://static.acer.com/up/Resource/Acer/Laptops/Aspire_5/images/20230626/Aspire_5_AMD_main.png",
+    "category": "Laptops",
+    "buyLink": "https://www.amazon.com/dp/B09R8P2L5T"
+  },
+  "17": {
+    "name": "iPad 10th Gen",
+    "description": "Apple's latest iPad with improved display and USB-C support.",
+    "image": "https://store.storeimages.cdn-apple.com/4668/as-images.apple.com/is/ipad-10th-gen-hero",
+    "category": "Mobiles",
+    "buyLink": "https://www.amazon.com/dp/B0BJMFQPTG"
+  }
+}
+
+

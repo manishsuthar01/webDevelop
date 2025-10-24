@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h2>concept of deep copy and shallow copy</h2>
+    <script>
+        console.log("ok");
+
+        let arr1 = ["manish", 88, 46, true];
+        // let arr2=arr1; ---> deep copy, references are passed to arr2,that will change value in arr1 if we change value of arr2
+        let arr2 = arr1.slice(0, arr1.length).concat(["suthar"]);
+
+        arr2[3] = false;
+
+        console.log(arr2);
+        console.log(arr1);
+
+
+    </script>
+</body>
+
+</html>

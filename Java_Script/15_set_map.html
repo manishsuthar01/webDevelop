@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h2><b>set:</b> In JavaScript, a Set is a built-in object that lets you store unique values of any type — primitive
+        values or
+        object references.
+    </h2>
+    <script title="set">
+        // we can only give data which is iterable like array,string ,objet in set
+        // set automatically remove duplicate values
+        let set = new Set([1, 2, 3, 3]);
+        console.log(set)
+        set.forEach((elem) => {
+            console.log(elem)
+        })
+        set.add(5)
+        console.log(set.delete(1))
+        console.log(set.has(2))
+        console.log(set.size)
+        console.log(set.delete(2))
+        console.log(set.clear())
+        console.log(set)
+
+    </script>
+
+    <h2><b>map:</b>In JavaScript, a Map is a built-in object that holds key-value pairs where the keys can be of any
+        data type
+        (unlike objects, which only accept strings or symbols as keys).</h2>
+    <script title="map">
+
+        const map = new Map([[1, 'id'], ['name', 'manish'], [true, 'boolean key']])
+        map.set("fname", 'manish suthar')
+        console.log(map)
+        console.log(map.get(1))
+        console.log(map.size)
+        console.log(map.has(true)) 
+        console.log(map.delete('fname'))
+        console.log(map.keys())
+
+        // console.log(map.clear())
+        console.log(map)
+
+ 
+    </script>
+
+</body>
+ 
+</html>

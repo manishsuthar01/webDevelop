@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h2>new keyword is used to initialize a varible and assinging heap memory</h2>
+    <h3>an constructor function is called when we use new keyword</h3>
+    <h4>constructor function are normal function with first letter capital and always called by new keyword</h4>
+
+    <script>
+        let user={ 
+            name:'manish',
+            fun: function(){
+                console.log(this)
+            }
+        }
+        user.fun()
+        function fun() {
+            this.name = 'manish';
+        }
+        console.log(fun())
+        console.log(new fun());
+        var obj = new fun();
+        console.log(obj.name);
+
+        // coonstructor  
+        function User(name){
+            if(!new.target){
+                return new User(name)
+            }
+            this.name=name;  
+        }  
+
+    var person=User('manish');
+    console.log(person.name);
+    </script>
+</body>
+
+</html>

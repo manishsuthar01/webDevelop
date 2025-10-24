@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h2>object destructure</h2>
+    <p>object destructure is a way to extract properties from an object and assign them to variables.</p>
+    <p>syntax: const { property1, property2 } = object;</p>
+
+
+    <p>example: const { name, age } = person;</p>
+    <p>where person is an object with properties name and age.</p>
+
+    <!-- script -->
+    <script>
+        let course = {
+            course_Name: "js hindi",
+            price: 999,
+            course_instructor: "hitesh"
+        }
+        // console.log(course.course_Name);
+
+        // destruct the object
+        const { course_Name: cname } = course;
+        console.log(cname)
+        // console.log(course);
+
+        // destruct the object with rest operator
+        const user = {
+            name: "Manish",
+            age: 21,
+            city: "Jaipur"
+        };
+
+        const { name:nm , ...others } = user;
+
+        console.log(nm);   // "Manish"
+        console.log(others); // { age: 21, city: "Jaipur" }
+
+    </script>
+
+
+    <!--  API->application programing interface
+     api is a json file->js object notation
+     structure==>{
+                      "name":"manish",
+                      "course":"js"
+                 }
+ -->
+
+</body>
+
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function pizzaorder() {
+            return new Promise((resolve, reject) => {
+                console.log(" 2) order is received...");
+                setTimeout(() => {
+                    let success = true;
+                    if (success) {
+                        resolve("pizza ban gya...");
+                    }
+                    else {
+                        reject("pizza jal gya...");
+                    }
+                }, 4000);
+            })
+        }
+
+        async function makepizza() {
+            try {
+                console.log("1) order is placed...");
+                let status = await pizzaorder();// js rukega vhi result ke aane tak
+                console.log("3) got it :" + status);
+            }
+            catch (err) {
+                console.log("3. Error:", error);
+            }
+        }
+
+        makepizza();
+    </script>
+</body>
+
+</html>

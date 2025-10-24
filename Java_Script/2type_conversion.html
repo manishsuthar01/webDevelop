@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h2>type conversions</h2>
+    <script>//implicit type conversion
+
+        result = '3' + null;
+        console.log(result);
+
+
+        console.log(typeof result);
+
+        result = '3' - null;
+        console.log(result);
+        console.log(typeof result);
+        //explicit type conversion
+
+
+        result = 'hello' - 1;
+        result = Number(result);
+        console.log(result);
+        console.log(typeof result);
+
+
+        result = 20.202;
+        result = parseInt(result);//parseFloat,
+        console.log(result);
+        console.log(typeof result);
+
+        result = "A" - "true";
+        console.log(result);
+        console.log(typeof result);
+
+
+    </script>
+</body>
+
+</html>

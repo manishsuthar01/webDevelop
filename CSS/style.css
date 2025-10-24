@@ -1,0 +1,16 @@
+h{
+    color: orange;
+}
+p{
+    color:  blue;
+}
+.heading{
+    color: rgb(86, 123, 13);
+    border: 2px solid black;
+}
+#head{
+    color: rgb(116, 123, 123);
+    border: 2px solid ;
+    border-width: 5px;
+    border-right: 0ch;
+}

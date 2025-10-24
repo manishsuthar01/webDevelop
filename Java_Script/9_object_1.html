@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <h1>basics of objecst</h1>
+  <!-- 
+  singleton ==>constructor se bnane pe singletonobject bnta hai,
+  ye unique object hota hai ,
+
+  --> 
+  <!-- script -->
+
+  <script>
+    // object literals
+
+    const mysym = Symbol("key1");
+
+    let obj = {
+      name: "bravo",
+      age: 21,
+      [mysym]: "mykey1",
+      "last name": "john",
+      fun: function () {
+        return "i am function";
+      },
+      arr: [3, 6, 7],
+      fullname: {
+        usename: {
+          firstname: "manish",
+          lastname: "suthar"
+        }
+      }
+    };
+
+    // console.log(obj.name);
+    // console.log(obj["name"]);
+    // console.log(obj[mysym]);
+    // console.log(obj.age);
+    // console.log(obj["last name"]);
+    // console.log(obj.fun());
+    // console.log(obj.arr);
+    // console.log(obj.fullname?.usename);
+    // Object.freeze(obj)
+    // console.log(Object.isFrozen(obj)); 
+
+    let obj1 = { 1: 'a', 2: 'b' }
+    let obj2 = { 3: 'a', 4: 'b' }
+
+    let obj3 ={...obj1,...obj2};
+
+    // let obj3 = Object.assign({}, obj1, obj2)
+    // {}-->this make sure that it will
+    //  return an object,without this all 
+    // the objects are added in obj 1,
+    // this will modify the obj1
+    console.log(obj3);
+    console.log(typeof obj3)
+
+
+    let a = "key2";
+    obj.key = "item";
+    obj[a] = "item2";
+    console.log(obj);
+
+    for (let i in obj) {
+      // console.log(obj[i]);    
+    }
+
+    for (let i of Object.keys(obj)) {
+      // console.log(obj[i]);
+    }
+    console.log(Object.keys(obj))//===> return the array of keys
+    console.log(Object.values(obj))//===>return the array of values
+    console.log(Object.entries(obj))//===>return array with key value pair in a array
+    console.log(obj.hasOwnProperty('name'))
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h2> Inheritance in JavaScript allows one class to inherit properties and methods from another class, enabling code
+        reuse and the creation of hierarchical relationships between classes.</h2>
+    <script>
+        class Animal {
+            constructor(name) {
+                this.name = name;
+            }
+
+            speak() {
+                console.log(`${this.name} makes a noise.`);
+            }
+        }
+        class Dog extends Animal {
+            constructor(name) {
+                // this.name = name; 
+                super(name); // Call the constructor of the parent class
+
+            }
+
+        }
+        class Cat extends Animal {
+            speak() {
+                console.log(`${this.name} meows.`);
+            }
+        }
+        let dog = new Dog('Rex');
+        let cat = new Cat('Whiskers');
+        dog.speak(); // Output: Rex barks.
+        cat.speak(); // Output: Whiskers meows.
+
+    </script>
+</body>
+
+</html>

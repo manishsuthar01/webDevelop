@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h2>reduce function</h2>
+    <h3>reduce function is used for arrays to reduce a array in single value</h3>
+    <p>it has a callback function that has two parameters one is accumelator and one is currentvalue
+        after every iteration return value will store in accumelator,<b>after last iteration reduce return the accumelator value to fuction call</b>
+    </p>
+
+    <script>
+        let nums = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+        let reduceval = nums.reduce((accu, currval) => {
+            console.log(`accu : ${accu},currval:${currval}`)
+            return currval + 10
+        })
+        console.log(reduceval);
+        const shoppingcard = [
+            { item: 'mobile', price: 20000, discount: '40%' },
+            { item: 'laptop', price: 200000, discount: '50%' },
+            { item: 'tablet', price: 40000, discount: '30%' }
+        ]
+
+        let cardPrice=shoppingcard.reduce((price,currentPrice) => price+currentPrice.price,0)
+        console.log(cardPrice);
+    </script>
+</body>
+
+</html>

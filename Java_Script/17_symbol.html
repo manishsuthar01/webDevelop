@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h2> A Symbol is a primitive data type introduced in ES6.
+        It represents a unique and immutable identifier — mainly used as object property keys to avoid name clashes.
+  <br>
+  this is a hidden property,cant access normally
+    </h2>
+    <p>const symA = Symbol("id");<br>
+        const symB = Symbol("id");<br>
+        console.log(symA === symB); // false</p>
+
+
+    <script> 
+        const symA=Symbol('id');  
+        console.log(symA.toString())
+        console.log(symA.description) 
+         
+        let id=Symbol('id');
+        let obj={
+            name:'manish', 
+            age:22,
+            // [id]:1,
+
+        }
+        obj[id]=1;
+        console.log(Object.keys(obj))  // symbol is hidden
+        console.log(obj[id])
+    </script>
+</body>
+
+</html>  

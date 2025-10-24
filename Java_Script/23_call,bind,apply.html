@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <P>.call() lets you manually set the value of this.</P>
+    <p>you can borrow the function using .call() or .bind() or assign it manually.</p>
+    <h3>
+        So, fun.call(obj1) means:
+        <br>
+        "Call fun, and inside it, treat this as obj1."
+        <br>
+        So this.name → obj1.name → "manish"
+    </h3>
+    <br><br><br>
+    <h2>
+        In JavaScript, call, apply, and bind are methods available on functions that allow you to explicitly set the
+        value of this when calling a function.
+    </h2>
+   
+    <script>
+        function call() {
+            function fun(age) {
+                console.log(this.name, age)
+            }
+
+            let obj1 = {
+                name: 'manish',
+                // fun: function () {
+                //     console.log(this.name)
+                // }
+
+            }
+
+            let obj2 = {
+                name: 'kumar',
+            }
+
+            // when fun inside the onject
+
+            // obj1.fun()  // call fun in obj1
+            // obj2.fun() // error
+
+            // obj1.fun.call(obj1)      // manish
+            // obj1.fun.call(obj2)     //kumar
+
+            //   when fun outside the function
+
+            fun.call(obj1, 22)  // manish
+            fun.call(obj2)   //kumar
+        }
+        //    call()
+
+
+        function apply() {
+            // Just like call, but arguments are passed as an array.
+            // func.apply(thisArg, [arg1, arg2, ...])
+            function fun(age, fnum) {
+                console.log(`hello,my name is ${this.name} and age is ${age} and fnum is ${fnum}`)
+            }
+            let obj1 = {
+                name: 'manish',
+                age: 22
+            }
+
+            let obj2 = {
+                name: 'suthar',
+                age: 22,
+            }
+            fun.apply(obj1, [22, 7])
+        }
+        // apply();
+
+        function bind() {
+            //  bind() does not execute the function immediately.
+            //  Instead, it returns a new function with a fixed this value and optionally some preset arguments.
+            function fun(a, b) {
+
+                console.log("Hello, " + this.name + a);
+
+            }
+
+            let obj1 = {
+                name: 'manish'     
+            }
+            let bindedfun = fun.bind(obj1, [1, 23]);
+
+            bindedfun();
+
+            const app = {
+                name: "ClickToCook",
+                handleClick() {
+                    console.log("App name:", this.name);
+                }
+            };
+
+            const button = document.querySelector("button");
+            button.addEventListener("click", app.handleClick.bind(app));
+        }
+ 
+        bind();
+
+    </script>
+</body>
+
+</html>

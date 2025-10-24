@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <p>
+        In JavaScript, scope refers to the visibility and accessibility of variables, functions, and objects in
+        different parts of your code. It determines where a variable can be accessed or modified. There are two main
+        types of scope: global scope and local scope.
+    </p>
+
+    <p>
+        <b>Global scope:</b> Variables declared outside of any function or block have global scope. They can be accessed
+        from
+        anywhere in the code.
+    </p>
+    <p>
+        <b>Local scope:</b> Variables declared within a function or block have local scope. They can only be accessed
+        within
+        that function or block.
+    </p>
+    <p>
+        <b> Block scope:</b> Variables declared with the let or const keywords within a block (e.g., inside curly
+        braces) have
+        block scope. They can only be accessed within that block.
+    </p>
+
+    <script>
+        // Global scope
+        let globalVar = "I am a global variable";
+
+        function showGlobalVar() {
+            console.log(globalVar); // Accessible here
+        }
+
+        showGlobalVar(); // Output: I am a gl  obal variable
+
+        function localScopeExample() {
+            // Local scope     
+            var localVar = "I am a local variable";
+            console.log(localVar); // Accessible here
+        }
+        localScopeExample(); // Output: I am a local variable  
+        //  console.log(localVar); // Uncaught ReferenceError: localVar is not defined
+
+        if (true) {
+            // Block scope
+            let blockVar = "I am a block-scoped variable";
+            console.log(blockVar); // Accessible here
+        }
+        //  console.log(blockVar); // Uncaught ReferenceError: blockVar is not defined
+
+
+        //  lexical scope
+        function outerFunction() {
+            let outerVar = "I am an outer variable";
+
+            function innerFunction() {
+                console.log(outerVar); // Accessible here due to lexical scope
+            }
+
+            innerFunction(); // Output: I am an outer variable
+        }
+        outerFunction(); // Call the outer function to see the output
+
+        // Closure example
+        function makeCounter() {
+            let count = 0; // Local variable
+
+            return function () {
+                count++; // Accessing the local variable from the outer function
+                return count;
+            };
+        }  
+        const counter = makeCounter(); // Create a counter function
+        console.log(counter()); // Output: 1    
+        console.log(counter()); // Output: 2
+        console.log(counter()); // Output: 3
+         
+        // console.log(x); // This would throw ReferenceError: Cannot access 'x' before initialization
+        let x = 10; // Global variable
+
+    </script>
+</body>
+
+</html>

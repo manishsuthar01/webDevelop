@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <p><b>Question:</b> implement a try-catch block to handle an error that occurs during API data fetching?</p>
+
+    <!-- script -->
+    <script>
+       async  function tryCatch() {
+            try {
+                let response = await fetch("https://jsonplaceholder.typicode.com/posts/1"); // A valid JSON API
+                let data = await response.json(); // Fixed the incorrect method
+                console.log(data);
+            }
+            catch (error) {
+                console.error("There is an error: " + error); // Improved error message
+            }
+        }
+
+        tryCatch();
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #container{
+            position: relative;
+            width:500px;
+            height: 500px;
+            background-color:burlywood;
+            border:2px solid black ;
+            border-radius: 5px;
+        }
+
+        #box{
+            margin: 4px;
+           position:absolute;
+           width: 100px;
+           height: 100px;
+           background-color: crimson;
+           border:2px solid black ;
+           border-radius: 5px;
+          
+        }
+        button{
+            margin: 5px;
+            height: 30px;
+            width: 100px;
+        }
+    </style>
+</head>
+<body>
+     <div id="container">
+             <div id="box">
+
+             </div>
+     </div>
+    <button onclick="move()">click to move</button>
+
+    <script>
+        const box=document.getElementById("box");
+    
+        function move()
+        {
+            const id=setInterval(frame,10);
+            let position=0;
+            function frame(){
+                position++;
+                if(position==390){
+                    clearInterval(id);
+                }
+                box.style.left=position+"px";
+                box.style.top=position+"px";
+           
+            }
+        }
+
+    </script>
+</body>
+</html>

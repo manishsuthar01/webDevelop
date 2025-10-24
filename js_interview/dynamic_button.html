@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+     <p><b>Question :</b> a button dynamically and add it to the web page</p>
+      <div class="container">
+
+      </div>
+     <!-- script -->
+      <script>
+         let div=document.querySelector(".container")
+         let button=document.createElement("button");
+         button.textContent='click me'
+         div.appendChild(button);
+         console.log(div.children)
+        //  let button=`<button>set</button>`;
+        //  let div=document.querySelector(".container")
+        //  div.innerHTML=button;
+        button.addEventListener("click",()=>{
+            alert("you clicked the button");
+        });
+        
+
+      </script>
+</body>
+</html>

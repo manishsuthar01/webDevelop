@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>animation</title>
+    <style>
+        *{ 
+             box-sizing: border-box;
+            padding: 0px;
+            margin: opx;
+        }
+        h2{
+            
+            position:relative;
+            text-align: center;
+            text-justify: center;
+        }
+        .view{
+            margin-top: 600px;
+            display: flex;
+            padding: 17px;
+            flex-direction: row;
+            flex-wrap: wrap;
+            border: 2px solid;
+        
+        }
+        @keyframes appear {
+            from{
+                opacity: 0;
+                scale :0.5;
+                transform: translateX(-100px);
+            }
+            to{
+                opacity: 1;
+                scale: 1;
+                transform: translateX(0px);
+            }
+        }
+        .box{
+            padding: 5px;
+            margin: 5px;
+            border: 1px solid;
+            width: 260px;
+            height: 100px;
+            animation-name: appear;
+            animation-timing-function: linear;
+            animation-timeline: view() ;
+            animation-range: entry 30% cover 40%;
+        }
+
+    </style>
+</head>
+<body>
+    <h2>scroll to view</h2>
+     <div class="view">
+         
+        <div class="box" style="background-color: blue;"> </div>
+        <div class="box" style="background-color:blue;"> </div>
+        <div class="box"style="background-color: blue;"> </div>
+        <div class="box"style="background-color: blue;"> </div>
+        <div class="box"style="background-color: blue;"> </div>
+        <div class="box"style="background-color: blue;"> </div>
+        <div class="box"style="background-color: blue;"> </div>
+        <div class="box"style="background-color: blue;"> </div>
+        <div class="box"style="background-color: blue;"> </div>
+        <div class="box"style="background-color: blue;"> </div>
+        <div class="box"style="background-color: blue;"> </div>
+        <div class="box"style="background-color: blue;"> </div>
+        <div class="box"style="background-color: blue;"> </div>
+        <div class="box"style="background-color: blue;"> </div>
+        <div class="box"style="background-color: blue;"> </div>
+        <div class="box"style="background-color: blue;"> </div>
+        <div class="box"style="background-color: blue;"> </div>
+        <div class="box"style="background-color: blue;"> </div>
+        <div class="box"style="background-color: blue;"> </div>
+        <div class="box"style="background-color: blue;"> </div>
+        <div class="box"style="background-color: blue;"> </div>
+        <div class="box"style="background-color: blue;"> </div>
+        <div class="box"style="background-color: blue;"> </div>
+        <div class="box"style="background-color: blue;"> </div>
+        <div class="box"style="background-color: blue;"> </div>
+        <div class="box"style="background-color: blue;"> </div>
+        <div class="box"style="background-color: blue;"> </div>
+        <div class="box"style="background-color: blue;"> </div>
+        <div class="box"style="background-color: blue;"> </div>
+        <div class="box"style="background-color: blue;"> </div>
+        <div class="box"style="background-color: blue;"> </div>
+     </div>
+</body>
+</html>

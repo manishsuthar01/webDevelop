@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Box-Sizing</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        div {
+            text-transform: capitalize;
+            /* text-align:start; */
+
+            /* box-sizing: content-box; */
+            border: 5px solid;
+            background-color: rgb(145, 231, 16);
+            height: 120px;
+            width: 500px;
+
+        }
+
+        div#myDiv {
+            /* transform: rotate(20deg); */
+            /* transform: translateX(20px, 50px); */
+            transform: scaleX(0.9);
+            /* transform: skew(20deg,20deg); */
+        }
+    </style>
+</head>
+
+<body>
+    <div id="normaldiv">
+        <p>normal div</p>
+    </div>
+    <br><br>
+    <hr>
+    <hr><br><br>
+    <div id="myDiv">
+        <p>using transformation</p>
+    </div>
+
+</body>
+
+</html>

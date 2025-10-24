@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <p><b>Question:</b> remove all occurrence of a specific element from an array</p>
+    <!-- script -->
+    <script>
+        let arr = [1, 4, 4, 6, 3, 3, 7, 8, 4, 9, 5, 4];
+        let target = 4;
+        function remove(arr, target) {
+            return arr.filter((value)=> value!==target)
+        }
+        let removedarr=remove(arr,target);
+        console.log(removedarr);
+        console.log(arr);
+    </script>
+</body>
+
+</html>

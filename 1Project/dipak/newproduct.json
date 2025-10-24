@@ -1,0 +1,45 @@
+{
+    "1": {
+      "name": "Portable Handheld Turbo Fan",
+      "description": "Stay cool anywhere with this USB rechargeable handheld fan. Powerful yet quiet motor, lightweight, foldable, and perfect for travel, workouts, and daily use.",
+      "image": "images/portable-fan.jpg",
+      "category": "Cooling Gadgets",
+      "buyLink": "https://zn.to/portable-fan"
+    },
+    "2": {
+      "name": "Elegant Small Pearl Lamp",
+      "description": "Elegant small pearl lamp available in two colors. Perfect for table décor, events, or ambient home lighting. Modern and stylish design with soft glow.",
+      "image": "images/pearl-lamp.jpg",
+      "category": "Home Decor",
+      "buyLink": "https://zn.to/pearl-lamp"
+    },
+    "3": {
+      "name": "Air Purifier for Home Allergies Pets Hair",
+      "description": "Covers up to 1095 ft², features a HEPA-grade filter and quiet sleep mode. Ideal for bedrooms and large spaces. 141CFM CADR, 56W motor, and compact design.",
+      "image": "images/air-purifier.jpg",
+      "category": "Home Appliances",
+      "buyLink": "https://zn.to/air-purifier"
+    },
+    "4": {
+      "name": "LED Desk Lamp for Home Office",
+      "description": "9.5W 750LM metal lamp with touch controls. Eye-friendly lighting perfect for office, study, or bedside. Sleek and modern for productivity and comfort.",
+      "image": "images/desk-lamp.jpg",
+      "category": "Lighting",
+      "buyLink": "https://zn.to/desk-lamp"
+    },
+    "5": {
+      "name": "Automatic Peeler for Kitchen",
+      "description": "One-touch electric peeler for quick and mess-free fruit and vegetable peeling. Adjustable arm fits various sizes. Ideal for home cooks and seniors.",
+      "image": "images/automatic-peeler.jpg",
+      "category": "Kitchen Gadgets",
+      "buyLink": "https://zn.to/automatic-peeler"
+    },
+    "6": {
+      "name": "Valentine's Day Heart-Shaped 3D Moon Photo Viewer",
+      "description": "Custom romantic gift with hidden photo projection. Heart-shaped moon design perfect for Valentine’s, anniversaries, or special moments.",
+      "image": "images/moon-photo-viewer.jpg",
+      "category": "Gifts",
+      "buyLink": "https://zn.to/valentines-gift"
+    }
+  }
+  

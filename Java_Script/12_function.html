@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <h2>function in js</h2>
+  <script>
+
+    // console.log(this)//-->window
+
+    var s = 'ok';
+    (function name(s) {
+      console.log("hello,i am function " + s);
+      // console.log(this)//-->window
+    })("manish");
+
+
+    // function declaration 
+    function add(a, b) {
+      return a + b;
+
+    }
+    let a = 5,
+      b = 6;
+    let sum = console.log(add(a, b));
+
+
+    //anonymoue function ko call krna ke liye hme use ak variable me assign krna pdta hai
+    // ,kyuki iske pas koi name nhi hota jise hm ise call kr ske
+    let fun = function () {
+      console.log("i am anonymous");
+    };
+
+    fun();
+    // function expression
+    // function expression is a function that is assigned to a variable
+
+
+    // arrow function ,,,ye anonymouse function ko hi implement krne ka trika hai
+
+   if(true) {
+      let d = (c, d) => {
+        console.log(5 + 8);
+        console.log(this)
+      };
+      d();
+    }
+
+ 
+  </script>
+
+
+</body>
+
+</html>

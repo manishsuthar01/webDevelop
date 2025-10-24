@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>transformation</title>
+    <style>
+        .box {
+            position: relative;
+            top: 0px;
+            left: 0px;
+            width: 100px;
+            height: 50px;
+            border: 2px solid black;
+            transition-property: width;
+            transition-timing-function:cubic-bezier(0.1,0.7,0.1,0,6);
+            transition-duration: 5s;
+            transition-delay: 1s;
+            /* transform-origin:-10px; */
+            /* transform-style: preserve-3d; */
+            /* transform-box:stroke-box; */
+           
+        }
+        .box:hover{
+           width: 500px;
+           height: 100px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box"></div>
+
+</body>
+
+</html>

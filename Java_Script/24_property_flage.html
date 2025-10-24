@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h2>a property flag refers to the internal attributes (also known as property descriptors) that control the behavior
+        of object properties. These flags are part of the Object.defineProperty() and Object.getOwnPropertyDescriptor()
+        mechanisms.</h2>
+    <script>
+        let obj = {}
+        obj.name = "manish";
+
+        console.log(Object.getOwnPropertyDescriptor(obj, "name"))
+        Object.defineProperty(obj,'age', {
+            value: 22,
+            Writable: false,
+            enumerable: false,    //object.keys me nhi dikhega
+            configurable: false    // keys ko delete nhi kr skte if true
+        });
+        obj.age=30;
+        console.log(obj)
+        console.log(Object.keys(obj))
+    </script>
+</body>
+
+</html>

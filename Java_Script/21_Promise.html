@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h2>A Promise is an object that represents the future result of an asynchronous operation.
+        <br>
+        It tells JavaScript:
+        <br>
+        “I’ll give you the result later — either success ✅ or failure ❌.”
+    </h2>
+    <script>
+        function fun(task) {
+            return new Promise((resolve, reject) => {
+                if (task) {
+                    resolve("completed");
+                }
+                else {
+                    reject("not completed");
+                }
+            })
+        }
+
+        let onResolve = (res) => {
+            console.log(res);
+        }
+        let onReject = (err) => {
+            console.log(err)
+        }
+
+        // fun(true).then(onResolve).catch(onReject);
+
+
+        // pizza store
+
+        let pizzaOrder = new Promise((resolve, reject) => {
+            console.log("order is registered...");
+            setTimeout(() => {
+                let success = true;
+                if (success) {
+                    resolve("pizza ban gya...")
+                }
+                else {
+                    reject("pizza jal gya...")
+                }
+            }, 4000);
+        });
+
+        pizzaOrder.then((res) => { console.log(res) }).catch((err) => console.log(err));
+    </script>
+
+</body>
+
+</html>

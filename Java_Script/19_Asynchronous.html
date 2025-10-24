@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>js is synchronous by default</h2>
+    <h3>setTimeout ko stack me phle push kr diya jata hai  chahe timedalay 0sec ka ho</h3>
+
+    <script>
+        console.log('1')
+        setTimeout(()=>{
+            console.log("2")
+        },1000)
+        console.log('3')
+        // output=1,3,2
+    </script>
+</body>
+</html>

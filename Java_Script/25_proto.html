@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h2>Every JavaScript object has an internal link to another object called its prototype. This link is accessible
+        through the __proto__ property.</h2>
+    <p>When you try to access a property or method on an object, JavaScript looks:
+        <br>
+        First in the object itself.
+        <br>
+        Then in its __proto__ (i.e., its prototype).
+        <br>
+        Then in that prototype’s prototype… and so on (this is called the prototype chain).
+    </p>
+    <script>
+        let person = {
+            name: 'Manish'
+        };
+        console.log(person.toString())
+
+        let animal = {
+            eats: true
+        };
+
+        let rabbit = {  
+            jumps: true
+        };
+
+        rabbit.__proto__ = animal;
+
+        console.log(rabbit.eats); // true (from animal)
+        console.log(rabbit.jumps); // true (from rabbit)
+
+        console.log(animal.hasOwnProperty('jump'))
+
+        let obj1={
+            fname:"manish"
+        }
+
+        let obj2=Object.create(obj1)
+        console.log(obj2)
+
+    </script>
+</body>
+
+</html>

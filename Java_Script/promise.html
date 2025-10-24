@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Promise Example</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            text-align: center;
+            padding: 50px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+        }
+
+        .status {
+            width: 400px;
+            height: 400px;
+            background-color: rgb(185, 157, 157);
+            margin-top: 20px;
+            color: white;
+            margin: 20px auto;
+            border-radius: 10px;
+        }
+
+        .status ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .status li {
+            font-size: 2rem;
+            margin: 10px 0;
+            padding: 10px;
+            background-color: #907272;
+        }
+
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            background-color: #28a745;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: transform 0.3s ease;
+        }
+
+        button:hover {
+            background-color: #218838;
+            transform: scale(1.05);
+        }
+    </style>
+</head>
+
+<body>
+    <h2>Some stuff about promises</h2>
+    <div class="status">
+        <h1>Status of Pizza</h1>
+        <ul>
+
+        </ul>
+    </div>
+    <button onclick="pizzaOrder()">Order Pizza</button>
+
+    <script>
+        let list = document.querySelector(".status ul");
+
+
+        function myPromise() {
+            return new Promise((resolve, reject) => {
+                if (Math.random() > 0.5) {
+                    setTimeout(() => {
+                        resolve("🍕 Pizza is ready!");
+                        let li = document.createElement("li");
+                        li.innerText = "🍕 Pizza is ready!"
+                        list.appendChild(li);
+
+                    }, 3000);
+                } else {
+                    setTimeout(() => {
+                        let li = document.createElement("li");
+                        li.innerText = "🍕 Pizza is burned!";
+                        list.appendChild(li);
+                        reject("🔥 Pizza is burned!");
+                    }, 3000);
+
+
+                }
+            });
+        }
+        function pizzaOrder(e) {
+            list.innerHTML = ""; // Clear previous status
+            let li = document.createElement("li");
+            li.innerText = "🛒 Order placed...";
+            list.appendChild(li);
+
+            myPromise()
+                .then(result => {
+                    let li = document.createElement("li")
+                    li.innerText = "🍕 Pizza is being delivered...";
+                    list.appendChild(li);
+                    setTimeout(() => {
+                        li.innerText = "🍕 Pizza is delivered!";
+                        list.appendChild(li)
+                    }, 2000);
+
+                })
+                .catch(error => {
+
+                    let li = document.createElement("li");
+                    li.innerText = "🔥 Pizza is not delivered due to buring!";
+                    list.appendChild(li);
+                });
+        }
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h2>there are some cases when javascript assumed that it should be true</h2>
+
+    <!-- script -->
+    <script>
+        let userEmail = "manish";
+        if (userEmail) {
+            console.log("user is loged in !")
+        }
+        else {
+            console.log("you dont have any email")
+        }
+
+        // nullish coalescing operator(??): null,undefined
+
+        let val1;
+        val1 = 5 ?? 10;//-->5
+        val1 = null ?? 15;//-->15
+        val1 = undefined ?? 10;//-->10
+        val1 = undefined ?? 10 ?? 15;//--> 10,always first value
+        console.log(val1)
+    </script>
+
+    <h3> notes </h3>
+    <p>
+        "let userEmail = "manish";"
+        if userName is empty string than it will assume to be false value
+        but if string is not empty than it is assume to be true by default,,,
+        considering that we have not done any comparision just write the variable name 
+    </p>
+
+
+    <h3> falsy values</h3>
+   <p>  flase,0,-0,null,undefined,bigint,"",NaN</p>
+   <h3> truthy values </h3>
+   <p> "0","flase"," ",[],{},function(){}</p>
+
+
+</body>
+
+</html>

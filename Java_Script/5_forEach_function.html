@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h2>forEach function in js </h2>
+    <script>
+
+        const nums = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+        nums.forEach((num) => {
+            console.log(num * num);
+        });
+
+        // console.log(nums);
+        //we can push individual value of different array by squaring that value
+
+        let squareEach = [];
+
+        nums.forEach((num) => {
+
+            squareEach.push(num * num);
+        });
+
+        console.log(squareEach);
+
+        //forEach function main array me koi change nhi krta hai,ye uski ak copy
+        //create krta hai or uspe operation perform krta hai
+        //isko kisi variable me assign nhi kr skte
+
+
+    </script>
+</body>
+
+</html>
